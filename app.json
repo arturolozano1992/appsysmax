@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "appsysmax",
+    "slug": "appsysmax",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "appsysmax"
+}
