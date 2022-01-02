@@ -9,7 +9,7 @@ export const style = StyleSheet.create({
         //justifyContent: 'space-between',
     },
     content: {
-        backgroundColor: "transparent",
+        backgroundColor: styleBase.colors.primaryBackgroundColor,
         marginBottom: 20,
         marginTop: 30
     },

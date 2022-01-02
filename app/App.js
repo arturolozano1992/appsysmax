@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator, createDrawerNavigator, SafeAreaView, DrawerItems } from "react-navigation";
 import { zoomIn, fromLeft, fromRight } from 'react-navigation-transitions';
 import { TouchableOpacity, Text, View, ScrollView, Image, StyleSheet } from "react-native";
+import { init, getConfig } from "./config/settings";
 import { Root, Icon } from "native-base";
 import Login from "../app/screens/Login"
 import TBSBase from "./components/TBSBase";
@@ -28,30 +29,17 @@ export const AppNavigator = createStackNavigator({
 })
 
 export default class App extends TBSBase {
+    constructor(props) {
+        super(props);
+        init()
+    }
     componentDidMount() {
-       /*  SplashScreen.hide();
-
-      
-        let notifications = new Notifications();
-
-        notifications.channels();
-       
-        this.onTokenRefreshListener = notifications.onTokenRefresh();
-        
-        this.onNotification = notifications.onNotification();
-        this.onNotificationDisplayed = notifications.onNotificationDisplayed();
-        this.onNotificationOpened = notifications.onNotificationOpened();
-        this.getInitialNotification = notifications.getInitialNotification(); */
+        init();
 
     }
 
     componentWillUnmount() {
-        /* this.onTokenRefreshListener();
         
-        this.onNotification();
-        this.onNotificationDisplayed();
-        this.onNotificationOpened();
-        this.getInitialNotification(); */
     }
 
     render() {

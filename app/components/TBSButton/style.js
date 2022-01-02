@@ -7,6 +7,7 @@ export const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: theme.colors.primaryColor,
+        
         height: 50,
         marginTop: 18
     },

@@ -43,17 +43,17 @@ export const theme = {
 
         // tertiaryColor: '#77C3D0',
 
-        primaryColor: '#FFFFFF', //blanco
+        primaryColor: '#388e3c', //Verde
         primaryLightColor: '#8C8CAB',
         primaryDarkColor: '#24255D',
-        primaryBackgroundColor: "#f4f4f4", //Gris
+        primaryBackgroundColor: "#bdbdbd", //Gris
         primaryTextColor: '#6F6769',
         primaryPlaceholder: '#F7F7F7',
 
-        secondaryColor: '#FFBC6C',
+        secondaryColor: '#bdbdbd', //Gris
         secondaryLightColor: '#000000',
         secondaryDarkColor: '#000000',
-        secondaryBackgroundColor: "#F7F7F7",
+        secondaryBackgroundColor: "#388e3c",
         secondaryTextColor: '#FFFFFF',
 
         tertiaryTextColor: '#E93D04',

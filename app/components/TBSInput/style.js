@@ -29,8 +29,9 @@ export const style = {
     // styleLabelPlaceholder: {
     styleLabel: {
         //position: 'absolute', 
-        fontSize: theme.fontSize.caption,
+        fontSize: theme.fontSize.button+2,
         color: theme.colors.primaryColor,
+        fontWeight: 'bold',
         //paddingLeft: 12,
         top: 5
     },
@@ -38,14 +39,17 @@ export const style = {
         color: theme.colors.primaryDarkColor,
     },
     styleInput: {
+        borderWidth:2,
+        borderColor:theme.colors.primaryColor,
         //borderBottomWidth: 1,
         fontSize: theme.fontSize.body1,//.subtitle2, 
         //paddingTop: 16, 
         //paddingBottom: 10, 
         //marginBottom
-        paddingLeft: 0, 
+        paddingLeft: 10, 
         paddingRight: 0,
         color: theme.colors.primaryTextColor,
+        width:styleBase.deviceWidth - 80
         //height: 40,
         //top: 0//-10
     },

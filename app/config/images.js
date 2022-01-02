@@ -4,7 +4,8 @@ import menu from  "../res/images/menu01.svg";
 import save from  "../res/images/save01.svg";
 import save2 from  "../res/images/save02.svg";
 import userDefault from "../res/images/userDefault.png";
-import logo01 from "../res/images/logo.png";
+import logoSys from "../res/images/logoSysMax.png";
+//import logo01 from "../res/images/logo.png";
 import logo02 from "../res/images/logo02.png";
 import logo03 from "../res/images/logo03.png";
 import splash from "../res/images/iconSplash.png";
@@ -18,7 +19,7 @@ import logoMax from "../res/images/logoMax.png";
 //import menu01 from  "../res/images/menu01.svg";
 
 export const images = {
-    logo01: logoMax,
+    logo01: logoSys,
     logo02: logo02,
     logo03: logo03,
     splash: splash,

@@ -22,7 +22,7 @@ export function opcionesData(key) {
 
 //OBJETOS GLOBALES
 export const app = {
-    name: "Urbanizaciones",
+    name: "SysMax",
     version: '0.0.1'
 }
 Object.freeze(app);

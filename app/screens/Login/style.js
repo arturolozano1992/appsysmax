@@ -17,6 +17,13 @@ export const style = StyleSheet.create({
         flexDirection: "column",
         flex: 0
     },
+    title:{
+        alignSelf:"center", 
+        fontSize:styleBase.fontSize.h4, 
+        color:styleBase.colors.primaryColor,
+        marginTop:-100
+    },
+
     notch: {
         backgroundColor: styleBase.colors.primaryColor
     },
@@ -28,15 +35,15 @@ export const style = StyleSheet.create({
         justifyContent: "center"
     },
     logo: {
-        width: styleBase.deviceWidth - 180,
-        height: styleBase.deviceWidth - 180,
+        width: styleBase.deviceWidth - 50,
+        height: styleBase.deviceWidth - 150,
         resizeMode: "contain"
     },
     wrapperForm: {
         padding: 20,
         paddingTop: 0,
         paddingBottom: 0,
-        //backgroundColor: styleBase.colors.primaryBackgroundColor,
+        //backgroundColor: "white",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         //height: styleBase.deviceHeight * 0.45
@@ -67,8 +74,11 @@ export const style = StyleSheet.create({
         fontWeight: "300",
         fontSize: styleBase.fontSize.h7
     },
+
     styleButton: {
-        backgroundColor: styleBase.colors.primaryBackgroundColor
+        borderColor:styleBase.colors.secondaryColor,
+        borderWidth:2,
+        
     },
     olvidarPassword: {
         marginTop: Platform.OS == "android" ? 15 : 30,
@@ -79,5 +89,6 @@ export const style = StyleSheet.create({
         fontSize: styleBase.fontSize.body2,
         //position: "absolute",
         //bottom: 0
-    }
+    },
+    botones:{alignItems:"center", marginTop:"10%"}
 })

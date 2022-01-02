@@ -11,6 +11,7 @@ export async function getConfig(key) {
     return new Promise((resolve, reject) => {
         // Se va a usar AsyncStorage para persistencia
         try {
+            //alert(localDB + key)
             AsyncStorage.getItem(localDB + key).then(value=>{
                 console.log('GetConfig', `${key} ${value}`);
                 return resolve(value)
@@ -26,8 +27,9 @@ export async function getConfig(key) {
 
 export async function setConfig(key, value) {
     try {
+        //alert(JSON.stringify(value))
         await AsyncStorage.setItem(localDB + key, value)
-        console.log('SetConfig', `${key} ${value}`)
+        //alert('SetConfig', `${key} ${value}`)
     } catch(e) {
         // save error
         console.log('Setconfig error', e)
@@ -53,37 +55,46 @@ export async function setConfig2(key, value) {
 }
 
 export function init() {
-    console.log("Consulta de Configuraiones");
-    setConfig('idPersona', '');
-    setConfig('idUsuario', '');
-    setConfig('logged', 'false');
+    //alert("Consulta de Configuraiones");
+    /*setConfig('idUsuario', '');
+    setConfig('logged', 'false'); */
     setConfig('lang', 'es');
-    setConfig('fcmToken', '');
-    setConfig('accessToken', '');
-    //setConfig('proyectosApi', '');
-    setConfig('politica', 'false');
+    //alert(JSON.stringify(resFile))
+    setConfig('config',JSON.stringify(resFile) );
+    /* setConfig('fcmToken', '');
+    setConfig('accessToken', ''); */
+    //setConfig('politica', 'false');
 }
 
 export function loadSettings() {
     //Almacena los datos iniciales
     return new Promise((resolve, reject) => { 
         var _value = null;
-        getConfig("idPersona").then((value) => { 
-            _value = 1;
-            if (value === null || value === undefined) {
-                init();
-            }
-            getConfig("lang").then((lang) => {
+        //alert(resFile)
+        getConfig("lang").then((lang) => {
+            getConfig("config").then((config)=>{
+                //alert(config)
                 if (lang === 'es') {
-                    global.resFile = resFile;
+                    global.resFile = JSON.parse(config);
                 }
                 else {
                     global.resFile = resFile;
                 }
                 global.lang = lang
                 return resolve('OK')
-            });
+            })
+
+            
+            
+            
         });
+       /*  getConfig("idPersona").then((value) => { 
+            _value = 1;
+            if (value === null || value === undefined) {
+                init();
+            }
+            
+        }); */
     })
 
 }
