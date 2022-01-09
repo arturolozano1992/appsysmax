@@ -6,7 +6,7 @@ export const style = StyleSheet.create({
         backgroundColor: theme.colors.primaryDarkColor,
         height: theme.headerHeight,
         flexDirection: 'row',
-        justifyContent: 'center',
+        //justifyContent: 'flex-start',
         borderWidth: 0,
         borderTopWidth: 0,
         borderBottomWidth: 0,
@@ -14,6 +14,7 @@ export const style = StyleSheet.create({
         borderRightWidth: 0,
         elevation: 0,
         marginTop: Platform.OS === "ios" ? 0 : 24,
+        alignContent:"center"
         // shadowColor: "#000",
         // shadowOffset: { width: 0, height: 2 },
         // shadowOpacity: 0.2,
@@ -23,7 +24,7 @@ export const style = StyleSheet.create({
         flex: 1, 
         alignItems: 'flex-start',
         justifyContent: 'center',
-        paddingLeft: 0,
+        paddingLeft: '25%',
         paddingRight: 0
         //width: theme.deviceWidth * 0.60,
     },

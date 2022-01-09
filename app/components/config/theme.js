@@ -45,16 +45,16 @@ export const theme = {
 
         primaryColor: '#388e3c', //Verde
         primaryLightColor: '#8C8CAB',
-        primaryDarkColor: '#24255D',
-        primaryBackgroundColor: "#bdbdbd", //Gris
-        primaryTextColor: '#6F6769',
+        primaryDarkColor: '#2E7D32',
+        primaryBackgroundColor: "white", //Gris
+        primaryTextColor: 'white',
         primaryPlaceholder: '#F7F7F7',
 
         secondaryColor: '#bdbdbd', //Gris
         secondaryLightColor: '#000000',
         secondaryDarkColor: '#000000',
         secondaryBackgroundColor: "#388e3c",
-        secondaryTextColor: '#FFFFFF',
+        secondaryTextColor: '#bdbdbd', //color para cajas de texto gris
 
         tertiaryTextColor: '#E93D04',
         quaternaryTextColor: '#ffffff',

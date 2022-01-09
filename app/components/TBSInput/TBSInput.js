@@ -146,6 +146,7 @@ export default class TBSInput extends TBSBase {
 
     render() {
         const { styleContainer, value, label, placeholder, styleLabel, styleInput, onChangeText, password, state, placeholderTextColor, onBlur, disabled, area, rowSpan, maxLength, rounded, icon, onPressIcon, stackedLabel, area2,autoFocus } = this.props;
+        //(JSON.stringify(styleInput))
         // if (!this.state.value)
         //     this.state.value = value;
         // if (!this.state.value)

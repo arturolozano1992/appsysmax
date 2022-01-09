@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import { StyleSheet, Platform } from 'react-native'
+import { theme } from '../../components/config/theme';
 import { styleBase } from '../../config/theme';
 
 export const style = StyleSheet.create({
@@ -14,14 +15,17 @@ export const style = StyleSheet.create({
         //paddingTop: 100,
         // height: "100%", //styleBase.deviceHeight
         //justifyContent: "space-between",
-        flexDirection: "column",
-        flex: 0
+        //paddingBottom: 40,
+        //flex: 0
     },
     title:{
-        alignSelf:"center", 
-        fontSize:styleBase.fontSize.h4, 
+        alignSelf:"flex-start", 
+        fontSize:styleBase.fontSize.h7, 
         color:styleBase.colors.primaryColor,
-        marginTop:-100
+        marginTop:-5
+    },
+    text:{
+        color:styleBase.colors.secondaryTextColor
     },
 
     notch: {
@@ -54,8 +58,8 @@ export const style = StyleSheet.create({
         borderBottomColor: styleBase.colors.quaternaryTextColor
     },
     styleInput: {
-        color: styleBase.colors.quaternaryTextColor,
-        paddingLeft: 0
+        color:styleBase.colors.secondaryTextColor,
+
     },
     wrapperButton: {
         marginTop: Platform.OS == "android" ? 15 : 20,
@@ -80,9 +84,6 @@ export const style = StyleSheet.create({
         borderWidth:2,
         
     },
-    text:{
-        color:styleBase.colors.secondaryTextColor
-    },
     olvidarPassword: {
         marginTop: Platform.OS == "android" ? 15 : 30,
         fontSize: styleBase.fontSize.caption,
@@ -93,5 +94,6 @@ export const style = StyleSheet.create({
         //position: "absolute",
         //bottom: 0
     },
-    botones:{alignItems:"center", marginTop:"10%"}
+    botones:{alignItems:"center", marginTop:"10%"},
+    combo:{width:theme.deviceWidth/2.5, padding:5}
 })

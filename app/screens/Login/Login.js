@@ -43,6 +43,16 @@ export default class Login extends TBSBase {
             this.init()
         } */
     }
+     login() {
+        
+        let validate = validateForms(this.components);
+        alert(validate)
+        if (validate) {
+            toast(validate);
+            return;
+        }
+        this.navigate("Home", {logged: true});
+     }
 
     init() {
         //log("SPLASH INIT")
@@ -55,7 +65,7 @@ export default class Login extends TBSBase {
     }
     render() {
         return(
-            <Fragment >
+            
             <TBSScreen
                     statusBarColor={"transparent"}
                     styleContainer={style.container}
@@ -78,8 +88,9 @@ export default class Login extends TBSBase {
                             ref={(ref) => this.setRef("lblIdentificacion", ref)}
                             placeholder={""}
                             label={"Identificación:"}
+                            styleInput={style.text}
                             isRequired={true}
-                            message={`${getText("msgCampoRequerido")} ${getText("lblIdentificacion")}`}
+                            message={`${"Campo requerido:"} ${"Identificación"}`}
                             onChangeText={this.onChangeText}
                             state={"identificacion"}
                             stackedLabel={false}
@@ -89,9 +100,10 @@ export default class Login extends TBSBase {
                             ref={(ref) => this.setRef("lblClave", ref)}
                             placeholder={""}
                             label={"Contraseña:    "}
+                            styleInput={style.text}
                             isRequired={true}
                             password
-                            message={`${getText("msgCampoRequerido")} ${getText("lblClave")}`}
+                            message={`${"Campo requerido:"} ${"Contraseña"}`}
                             onChangeText={this.onChangeText}
                             state={"clave"}
                             stackedLabel={false}
@@ -125,7 +137,7 @@ export default class Login extends TBSBase {
                  
                  </TBSScreen>
                
-            </Fragment>
+            
         )
     }
 }

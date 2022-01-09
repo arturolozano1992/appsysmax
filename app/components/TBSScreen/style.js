@@ -10,7 +10,7 @@ export const style = StyleSheet.create({
     },
     content: {
         backgroundColor: styleBase.colors.primaryBackgroundColor,
-        marginBottom: 20,
+        //marginBottom: 20,
         marginTop: 30
     },
     container2: {
@@ -19,7 +19,7 @@ export const style = StyleSheet.create({
         //justifyContent: 'space-between',
     },
     header: {
-        backgroundColor: "transparent", // theme.colors.primaryColor
+        backgroundColor: theme.colors.primaryColor
         // height: theme.headerHeight,
         // flexDirection: 'row',
         // justifyContent: 'center',

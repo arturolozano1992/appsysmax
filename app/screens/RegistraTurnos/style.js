@@ -80,9 +80,6 @@ export const style = StyleSheet.create({
         borderWidth:2,
         
     },
-    text:{
-        color:styleBase.colors.secondaryTextColor
-    },
     olvidarPassword: {
         marginTop: Platform.OS == "android" ? 15 : 30,
         fontSize: styleBase.fontSize.caption,

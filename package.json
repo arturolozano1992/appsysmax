@@ -10,6 +10,7 @@
         "@expo/vector-icons": "^10.0.3",
         "@react-native-community/async-storage": "^1.5.1",
         "@react-native-community/cameraroll": "^1.2.1",
+        "@react-native-picker/picker": "^2.2.1",
         "expo": "~43.0.2",
         "expo-splash-screen": "~0.13.5",
         "expo-status-bar": "~1.1.0",

@@ -4,12 +4,25 @@ import { zoomIn, fromLeft, fromRight } from 'react-navigation-transitions';
 import { TouchableOpacity, Text, View, ScrollView, Image, StyleSheet } from "react-native";
 import { init, getConfig } from "./config/settings";
 import { Root, Icon } from "native-base";
-import Login from "../app/screens/Login"
+import Login from "../app/screens/Login";
+import CrearCuenta from "../app/screens/CrearCuenta";
 import TBSBase from "./components/TBSBase";
 import { styleBase } from "./config/theme";
 import TBSAlert from "./components/TBSAlert";
 
-
+const RootStack = createStackNavigator({
+    
+    Login: { screen: Login },
+    CrearCuenta: { screen: CrearCuenta },
+},
+{
+    headerMode: 'none',
+    transitionConfig: () => fromLeft(),
+    navigationOptions: {
+        gesturesEnabled: false
+    }
+},
+);
 export const AppNavigator = createStackNavigator({
     /* Splash: {
         screen: Splash
@@ -17,9 +30,9 @@ export const AppNavigator = createStackNavigator({
     Login: {
         screen: Login
     },
-    /* Home: {
+    Home: {
         screen: RootStack
-    }, */
+    },
 }, {
     headerMode: 'none',
     transitionConfig: () => fromLeft(),

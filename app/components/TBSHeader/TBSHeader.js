@@ -32,7 +32,7 @@ export default class TBSHeader extends TBSBase {
                     title &&
                     <View style={style.body}>
                         <TBSTitle 
-                            value={title} styleTitle={{fontSize: theme.fontSize.body1}} />
+                            value={title} styleTitle={{fontSize: theme.fontSize.h6}} />
                     </View>
                 }
                 {
